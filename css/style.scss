@@ -5,12 +5,22 @@
   font-family: "Montserrat", sans-serif;
 
   box-sizing: border-box;
+
+  font-size: 18px;
+  @media screen and (max-height: 750px), screen and (max-width: 900px) {
+    font-size: 14px;
+  }
 }
 
 .mwh {
   max-width: 750px;
   max-height: 550px;
   margin: 0 auto;
+
+  @media screen and (max-height: 750px), screen and (max-width: 900px) {
+    max-width: 550px;
+    max-height: 350px;
+  }
 }
 
 #close-btn {
@@ -26,6 +36,11 @@
     width: 35px;
     height: 35px;
   }
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .intro {
