@@ -5,7 +5,7 @@
 }
 
 .mwc {
-  max-width: 30vw;
+  max-width: 60vw;
   margin: 0 auto;
 }
 
@@ -44,9 +44,6 @@
           "vaardigheden-btn foto werkervaring-btn"
           ". opleidingen-btn .";
 
-        position: absolute;
-        margin: auto;
-
         .foto {
           background-image: url("/img/bijan-square.jpg");
           background-size: contain;
@@ -75,30 +72,47 @@
             grid-area: personalia-btn;
 
             &:hover {
-              background-color: #a8d0e6;
+              background-color: #24305e;
+              color: #ffffff;
             }
           }
 
           &.werkervaring-btn {
             grid-area: werkervaring-btn;
             &:hover {
-              background-color: #f76c6c;
+              background-color: #f8e9a1;
             }
           }
 
           &.vaardigheden-btn {
             grid-area: vaardigheden-btn;
             &:hover {
-              background-color: #f8e9a1;
+              background-color: #f76c6c;
             }
           }
 
           &.opleidingen-btn {
             grid-area: opleidingen-btn;
             &:hover {
-              background-color: #24305e;
+              background-color: #a8d0e6;
             }
           }
+        }
+
+        .lb {
+          background-color: #f8e9a1;
+        }
+
+        .lo {
+          background-color: #a8d0e6;
+        }
+
+        .rb {
+          background-color: #24305e;
+        }
+
+        .ro {
+          background-color: #f76c6c;
         }
       }
     }
