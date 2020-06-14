@@ -5,7 +5,7 @@
 }
 
 .mwc {
-  max-width: 900px;
+  max-width: 30vw;
   margin: 0 auto;
 }
 
@@ -80,6 +80,13 @@
   z-index: 1;
 }
 
+.nav .nav-wrap.center .links .link:hover {
+  font-size: 4em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  cursor: pointer;
+}
+
 .nav .nav-wrap.center .links .link.personalia-btn {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -118,13 +125,6 @@
 
 .nav .nav-wrap.center .links .link.opleidingen-btn:hover {
   background-color: #24305e;
-}
-
-.nav .nav-wrap.center .links .link:hover {
-  font-size: 6em;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  cursor: pointer;
 }
 
 .content-wrap .info-block {

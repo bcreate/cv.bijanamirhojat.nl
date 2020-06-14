@@ -5,7 +5,7 @@
 }
 
 .mwc {
-  max-width: 900px;
+  max-width: 30vw;
   margin: 0 auto;
 }
 
@@ -65,6 +65,12 @@
 
           z-index: 1;
 
+          &:hover {
+            font-size: 4em;
+            transition: all 1s;
+            cursor: pointer;
+          }
+
           &.personalia-btn {
             grid-area: personalia-btn;
 
@@ -92,12 +98,6 @@
             &:hover {
               background-color: #24305e;
             }
-          }
-
-          &:hover {
-            font-size: 6em;
-            transition: all 1s;
-            cursor: pointer;
           }
         }
       }
