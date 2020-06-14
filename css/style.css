@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mwc {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 25px;
+  z-index: 999;
+  display: none;
+}
+
+#close-btn .fa-times {
+  width: 35px;
+  height: 35px;
+}
+
+.nav .nav-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 999;
+}
+
+.nav .nav-wrap.center {
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-wrap.center .links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 450px 100px;
+      grid-template-rows: 100px 450px 100px;
+  -ms-grid-columns: 300px 450px 300px;
+      grid-template-columns: 300px 450px 300px;
+      grid-template-areas: ". personalia-btn ." "vaardigheden-btn foto werkervaring-btn" ". opleidingen-btn .";
+  position: absolute;
+  margin: auto;
+}
+
+.nav .nav-wrap.center .links .foto {
+  background-image: url("/img/bijan-square.jpg");
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: foto;
+}
+
+.nav .nav-wrap.center .links .link {
+  font-size: 2.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 1;
+}
+
+.nav .nav-wrap.center .links .link.personalia-btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: personalia-btn;
+}
+
+.nav .nav-wrap.center .links .link.personalia-btn:hover {
+  background-color: #a8d0e6;
+}
+
+.nav .nav-wrap.center .links .link.werkervaring-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: werkervaring-btn;
+}
+
+.nav .nav-wrap.center .links .link.werkervaring-btn:hover {
+  background-color: #f76c6c;
+}
+
+.nav .nav-wrap.center .links .link.vaardigheden-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: vaardigheden-btn;
+}
+
+.nav .nav-wrap.center .links .link.vaardigheden-btn:hover {
+  background-color: #f8e9a1;
+}
+
+.nav .nav-wrap.center .links .link.opleidingen-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: opleidingen-btn;
+}
+
+.nav .nav-wrap.center .links .link.opleidingen-btn:hover {
+  background-color: #24305e;
+}
+
+.nav .nav-wrap.center .links .link:hover {
+  font-size: 6em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.content-wrap .info-block {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 11;
+}
+
+.content-wrap .block-content-wrap {
+  min-width: 250px;
+  overflow: hidden;
+}
+
+.content-wrap .personalia {
+  background-color: #a8d0e6;
+  top: 0;
+}
+
+.content-wrap .werkervaring {
+  background-color: #f76c6c;
+  right: 0;
+  top: 0;
+}
+
+.content-wrap .vaardigheden {
+  background-color: #f8e9a1;
+  left: 0;
+  top: 0;
+}
+
+.content-wrap .opleidingen {
+  background-color: #24305e;
+  bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */

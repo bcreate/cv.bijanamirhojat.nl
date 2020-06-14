@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mwc {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 25px;
+  z-index: 999;
+  display: none;
+
+  .fa-times {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.nav {
+  .nav-wrap {
+    display: flex;
+    z-index: 999;
+
+    &.center {
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+
+      .links {
+        display: grid;
+        grid-template-rows: 100px 450px 100px;
+        grid-template-columns: 300px 450px 300px;
+
+        grid-template-areas:
+          ". personalia-btn ."
+          "vaardigheden-btn foto werkervaring-btn"
+          ". opleidingen-btn .";
+
+        position: absolute;
+        margin: auto;
+
+        .foto {
+          background-image: url("/img/bijan-square.jpg");
+          background-size: contain;
+          height: 100%;
+          width: 100%;
+          opacity: 0.7;
+          grid-area: foto;
+        }
+
+        .link {
+          font-size: 2.5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 1s;
+
+          z-index: 1;
+
+          &.personalia-btn {
+            grid-area: personalia-btn;
+
+            &:hover {
+              background-color: #a8d0e6;
+            }
+          }
+
+          &.werkervaring-btn {
+            grid-area: werkervaring-btn;
+            &:hover {
+              background-color: #f76c6c;
+            }
+          }
+
+          &.vaardigheden-btn {
+            grid-area: vaardigheden-btn;
+            &:hover {
+              background-color: #f8e9a1;
+            }
+          }
+
+          &.opleidingen-btn {
+            grid-area: opleidingen-btn;
+            &:hover {
+              background-color: #24305e;
+            }
+          }
+
+          &:hover {
+            font-size: 6em;
+            transition: all 1s;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-wrap {
+  .info-block {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 11;
+  }
+
+  .block-content-wrap {
+    min-width: 250px;
+    overflow: hidden;
+  }
+
+  .personalia {
+    background-color: #a8d0e6;
+    top: 0;
+  }
+
+  .werkervaring {
+    background-color: #f76c6c;
+    right: 0;
+    top: 0;
+  }
+
+  .vaardigheden {
+    background-color: #f8e9a1;
+    left: 0;
+    top: 0;
+  }
+
+  .opleidingen {
+    background-color: #24305e;
+    bottom: 0;
+  }
+}
