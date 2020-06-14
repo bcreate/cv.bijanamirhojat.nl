@@ -2,10 +2,13 @@
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.mwc {
-  max-width: 60vw;
+.mwh {
+  max-width: 750px;
+  max-height: 550px;
   margin: 0 auto;
 }
 
@@ -24,15 +27,37 @@
   height: 35px;
 }
 
-.nav .nav-wrap {
+.intro {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 999;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
 }
 
-.nav .nav-wrap.center {
+.intro h1 {
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+
+.nav {
+  width: 100%;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -41,28 +66,97 @@
           align-items: center;
 }
 
-.nav .nav-wrap.center .links {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 100px 450px 100px;
-      grid-template-rows: 100px 450px 100px;
-  -ms-grid-columns: 300px 450px 300px;
-      grid-template-columns: 300px 450px 300px;
-      grid-template-areas: ". personalia-btn ." "vaardigheden-btn foto werkervaring-btn" ". opleidingen-btn .";
+.nav .nav-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.nav .nav-wrap.center .links .foto {
-  background-image: url("/img/bijan-square.jpg");
-  background-size: contain;
+.nav .nav-wrap .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.nav .nav-wrap .links .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 25%;
+}
+
+.nav .nav-wrap .links .row.middle {
+  height: 50%;
+}
+
+.nav .nav-wrap .links .row .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  height: 100%;
+}
+
+.nav .nav-wrap .links .row .col.middle {
+  width: 50%;
+}
+
+.nav .nav-wrap .links .row .col div {
   height: 100%;
   width: 100%;
+}
+
+.nav .nav-wrap .links .row .col .foto {
+  background-image: url("/img/bijan-square.jpg");
+  background-size: cover;
   opacity: 0.7;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: foto;
 }
 
-.nav .nav-wrap.center .links .link {
+.nav .nav-wrap .links .row .col .lb {
+  background-color: #00b159;
+}
+
+.nav .nav-wrap .links .row .col .lo {
+  background-color: #00aedb;
+}
+
+.nav .nav-wrap .links .row .col .rb {
+  background-color: #ffc425;
+}
+
+.nav .nav-wrap .links .row .col .ro {
+  background-color: #d11141;
+}
+
+.nav .nav-wrap .links .row .col .link {
   font-size: 2.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,68 +172,43 @@
   z-index: 1;
 }
 
-.nav .nav-wrap.center .links .link:hover {
+.nav .nav-wrap .links .row .col .link:hover {
   font-size: 4em;
   -webkit-transition: all 1s;
   transition: all 1s;
   cursor: pointer;
 }
 
-.nav .nav-wrap.center .links .link.personalia-btn {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+.nav .nav-wrap .links .row .col .link.personalia-btn {
   grid-area: personalia-btn;
 }
 
-.nav .nav-wrap.center .links .link.personalia-btn:hover {
-  background-color: #24305e;
-  color: #ffffff;
+.nav .nav-wrap .links .row .col .link.personalia-btn:hover {
+  background-color: #00aedb;
 }
 
-.nav .nav-wrap.center .links .link.werkervaring-btn {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+.nav .nav-wrap .links .row .col .link.werkervaring-btn {
   grid-area: werkervaring-btn;
 }
 
-.nav .nav-wrap.center .links .link.werkervaring-btn:hover {
-  background-color: #f8e9a1;
+.nav .nav-wrap .links .row .col .link.werkervaring-btn:hover {
+  background-color: #00b159;
 }
 
-.nav .nav-wrap.center .links .link.vaardigheden-btn {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+.nav .nav-wrap .links .row .col .link.vaardigheden-btn {
   grid-area: vaardigheden-btn;
 }
 
-.nav .nav-wrap.center .links .link.vaardigheden-btn:hover {
-  background-color: #f76c6c;
+.nav .nav-wrap .links .row .col .link.vaardigheden-btn:hover {
+  background-color: #d11141;
 }
 
-.nav .nav-wrap.center .links .link.opleidingen-btn {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
+.nav .nav-wrap .links .row .col .link.opleidingen-btn {
   grid-area: opleidingen-btn;
 }
 
-.nav .nav-wrap.center .links .link.opleidingen-btn:hover {
-  background-color: #a8d0e6;
-}
-
-.nav .nav-wrap.center .links .lb {
-  background-color: #f8e9a1;
-}
-
-.nav .nav-wrap.center .links .lo {
-  background-color: #a8d0e6;
-}
-
-.nav .nav-wrap.center .links .rb {
-  background-color: #24305e;
-}
-
-.nav .nav-wrap.center .links .ro {
-  background-color: #f76c6c;
+.nav .nav-wrap .links .row .col .link.opleidingen-btn:hover {
+  background-color: #ffc425;
 }
 
 .content-wrap .info-block {
@@ -156,24 +225,78 @@
 }
 
 .content-wrap .personalia {
-  background-color: #a8d0e6;
+  background-color: #ffc425;
   top: 0;
 }
 
 .content-wrap .werkervaring {
-  background-color: #f76c6c;
+  background-color: #d11141;
   right: 0;
   top: 0;
 }
 
 .content-wrap .vaardigheden {
-  background-color: #f8e9a1;
+  background-color: #00b159;
   left: 0;
   top: 0;
 }
 
 .content-wrap .opleidingen {
-  background-color: #24305e;
+  background-color: #00aedb;
   bottom: 0;
+}
+
+footer.footer-cont {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer.footer-cont .footer-wrap {
+  height: 100%;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer.footer-cont .footer-wrap .fitem {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 33%;
+}
+
+footer.footer-cont .footer-wrap .hoi::after {
+  content: "\1F44B";
+}
+
+footer.footer-cont .footer-wrap .follow-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */

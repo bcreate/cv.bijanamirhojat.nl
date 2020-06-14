@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bijan Amir Hojat | Web Designer</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -15,23 +18,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
   </head>
   <body>
+    <div class="intro">
+      <h1>Bijan Amir Hojat | Web Designer</h1>
+      <a href="">bijan_amirhojat@hotmail.com</a>
+    </div>
     <div class="nav main">
-      <div class="nav-wrap center mwc">
+      <div class="nav-wrap mwh">
         <div class="links">
-          <div class="lb"></div>
-          <div class="lo"></div>
-          <div class="rb"></div>
-          <div class="ro"></div>
+          <div class="row top">
+            <div class="col">
+              <div class="lb"></div>
+            </div>
+            <div class="col middle">
+              <div class="link personalia-btn personalia">Over mij</div>
+            </div>
+            <div class="col">
+              <div class="rb"></div>
+            </div>
+          </div>
 
-          <div class="foto"></div>
-          <div class="link personalia-btn personalia">Over mij</div>          
-          <div class="link vaardigheden-btn vaardigheden">Vaardigheden</div>
-          <div class="link werkervaring-btn werkervaring">Werkervaring</div>
-          <div class="link opleidingen-btn opleidingen">Opleidingen</div>
+          <div class="row middle">
+            <div class="col left">
+              <div class="link vaardigheden-btn vaardigheden">Vaardigheden</div>
+            </div>
+            <div class="col middle">
+              <div class="foto"></div>
+            </div>
+            <div class="col">
+              <div class="link werkervaring-btn werkervaring">Werkervaring</div>
+            </div>
+          </div>
+
+          <div class="row bottom">
+            <div class="col">
+              <div class="lo"></div>
+            </div>
+            <div class="col middle">
+              <div class="link opleidingen-btn opleidingen">Opleidingen</div>
+            </div>
+            <div class="col">
+              <div class="ro"></div>
+            </div>
+          </div>
         </div>
-        <div id="close-btn" class="close"><i class="fas fa-times"></i>
-        </div>
-      </div>
+        <div id="close-btn" class="close"><i class="fas fa-times"></i></div>
       </div>
     </div>
     <div class="content-wrap">
@@ -41,61 +71,60 @@
             <ul class="icon-list-items">
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="far fa-id-card"></i>
+                  <i class="far fa-id-card"></i>
                 </span>
                 <span class="icon-list-text">Over mij</span>
               </li>
             </ul>
           </div>
-  
+
           <div class="widget-container">
             <ul class="icon-list-items">
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="fas fa-user"></i>
+                  <i class="fas fa-user"></i>
                 </span>
                 <span class="icon-list-text">Bijan Amir hojat</span>
               </li>
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="fas fa-map-marked-alt"></i>
+                  <i class="fas fa-map-marked-alt"></i>
                 </span>
                 <span class="icon-list-text">Bloedkoraalstraat 13</span>
               </li>
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="fas fa-city"></i>
+                  <i class="fas fa-city"></i>
                 </span>
                 <span class="icon-list-text">9743KB, Groningen</span>
               </li>
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="fas fa-globe"></i>
+                  <i class="fas fa-globe"></i>
                 </span>
                 <span class="icon-list-text">Nederland</span>
               </li>
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                  <i class="fas fa-phone-alt"></i>
                 </span>
                 <span class="icon-list-text">+31(0)6 - 1116 9009</span>
               </li>
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="far fa-envelope"></i>
+                  <i class="far fa-envelope"></i>
                 </span>
                 <span class="icon-list-text">bijan_amirhojat@hotmail.com</span>
               </li>
               <li class="icon-list-item">
                 <span class="icon-list-icon">
-                  <i aria-hidden="true" class="fas fa-venus-mars"></i>
+                  <i class="fas fa-venus-mars"></i>
                 </span>
                 <span class="icon-list-text">Man</span>
               </li>
             </ul>
           </div>
         </div>
-        
       </section>
 
       <section id="werkervaring" class="info-block werkervaring hide">
@@ -116,5 +145,26 @@
         </div>
       </section>
     </div>
+
+    <footer class="footer-cont">
+      <div class="footer-wrap">
+        <div class="contact-me fitem">
+          <span class="hoi">Hoi zeggen?</span>
+          <span>Stuur me een <a href="">berichtje</a>!</span>
+        </div>
+        <div class="follow-me fitem">
+          <span>Volg me op:</span>
+          <div class="social">insta</div>
+          <div class="social">linked</div>
+          <div class="social">dribbble</div>
+        </div>
+        <div class="static fitem">
+          <span
+            >Klik <a href="">hier</a> voor de statische versie van mijn
+            cv!</span
+          >
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
