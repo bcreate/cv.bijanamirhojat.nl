@@ -3,23 +3,47 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
 }
 
-nav {
-  position: fixed;
-  left: 0;
-  z-index: 50;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
+@media screen and (max-height: 750px), screen and (max-width: 900px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    left: 0;
+    z-index: 50;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 50;
+  }
+
 }
 
 nav div {
@@ -27,12 +51,13 @@ nav div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 nav div a {
@@ -64,11 +89,18 @@ nav div a.close {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container section {
+    height: 0;
+    width: 100%;
+  }
 }
 
 .container section h1 {
@@ -90,7 +122,7 @@ nav div a.close {
 .container section:target h1 {
   opacity: 0;
   -webkit-animation: 2s fadeIn forwards 0.5s;
-          animation: 2s fadeIn forwards 0.5s;
+  animation: 2s fadeIn forwards 0.5s;
 }
 
 .container #first {
