@@ -1,31 +1,10 @@
 @import "./colors.scss";
+
 * {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #d96aa7;
-  --secondary-color: #422c73;
-  --complimentary-color: #88bfb5;
-  --contrast-color: #f2e527;
-  --light-color: #d2a9d9;
-}
-
-.container {
-  background: #191919;
-  min-height: 100vh;
-  font-family: Montserrat, sans-serif;
-}
-
-nav a {
-  font-size: 40px;
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  text-align: center;
 }
 
 nav {
@@ -36,56 +15,79 @@ nav {
   justify-content: space-around;
   flex-direction: column;
   height: 100vh;
-  background: var(--secondary-color);
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    a {
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px;
+      text-align: center;
+
+      &.close {
+        display: none;
+      }
+    }
+  }
 }
 
-section {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 0;
-  opacity: 0;
-  transition: all ease-in 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.container {
+  background: #191919;
+  min-height: 100vh;
 
-section h1 {
-  color: #fff;
-  font-size: 50px;
-  text-transform: uppercase;
-  opacity: 0;
-}
+  section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-/* Styles applied on trigger */
-section:target {
-  opacity: 1;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+  }
 
-section:target h1 {
-  opacity: 0;
-  animation: 2s fadeIn forwards 0.5s;
-}
+  section:target {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
 
-#first {
-  background: var(--primary-color);
-}
-#second {
-  background: var(--complimentary-color);
-}
+    h1 {
+      opacity: 0;
+      animation: 2s fadeIn forwards 0.5s;
+    }
+  }
 
-#third {
-  background: var(--contrast-color);
-}
+  #first {
+    background: $lb;
+  }
 
-#fourth {
-  background: var(--light-color);
+  #second {
+    background: $lo;
+  }
+
+  #third {
+    background: $rb;
+  }
+
+  #fourth {
+    background: $ro;
+  }
 }
 
 @keyframes fadeIn {
