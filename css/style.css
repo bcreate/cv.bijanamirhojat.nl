@@ -4,23 +4,19 @@
   font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 18px;
+}
+
+@media screen and (max-height: 750px), screen and (max-width: 900px) {
+  * {
+    font-size: 14px;
+  }
 }
 
 nav {
   position: fixed;
   left: 0;
   z-index: 50;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-}
 
 nav div {
   display: -webkit-box;
