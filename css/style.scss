@@ -5,11 +5,6 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-
-  font-size: 18px;
-  @media screen and (max-height: 750px), screen and (max-width: 900px) {
-    font-size: 14px;
-  }
 }
 
 nav {
@@ -46,7 +41,6 @@ nav {
       text-decoration: none;
       padding: 20px;
       text-align: center;
-
 
       &.close {
         display: none;
