@@ -3,14 +3,7 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 18px;
-}
-
-@media screen and (max-height: 750px), screen and (max-width: 900px) {
-  * {
-    font-size: 14px;
-  }
+          box-sizing: border-box;
 }
 
 @media screen and (min-width: 768px) {
@@ -22,11 +15,11 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+        justify-content: space-around;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100vh;
   }
 }
@@ -39,11 +32,10 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+        justify-content: space-around;
     width: 100%;
     z-index: 50;
   }
-
 }
 
 nav div {
@@ -51,12 +43,12 @@ nav div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
   width: 100%;
 }
 
@@ -89,11 +81,11 @@ nav div a.close {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -122,7 +114,7 @@ nav div a.close {
 .container section:target h1 {
   opacity: 0;
   -webkit-animation: 2s fadeIn forwards 0.5s;
-  animation: 2s fadeIn forwards 0.5s;
+          animation: 2s fadeIn forwards 0.5s;
 }
 
 .container #first {
