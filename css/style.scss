@@ -1,5 +1,13 @@
 @import "./colors.scss";
 
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.woff") format("woff"),
+    url("../fonts/icomoon.otf") format("opentype"),
+    url("../fonts/icomoon.svg#filename") format("svg");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,10 +15,22 @@
   box-sizing: border-box;
 }
 
+h1 {
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 200;
+}
+
+a {
+  color: #fff;
+  font-size: 1.2em;
+}
+
 nav {
   @media screen and (min-width: 768px) {
     position: fixed;
     left: 0;
+    top: 0;
     z-index: 50;
 
     display: flex;
@@ -70,9 +90,6 @@ nav {
     }
 
     h1 {
-      color: #fff;
-      font-size: 50px;
-      text-transform: uppercase;
       opacity: 0;
     }
   }
@@ -85,9 +102,24 @@ nav {
     height: 100vh;
     z-index: 10;
 
-    h1 {
+    * {
       opacity: 0;
       animation: 2s fadeIn forwards 0.5s;
+    }
+  }
+
+  #bg {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 7%;
+      border-radius: 100%;
     }
   }
 
@@ -105,6 +137,53 @@ nav {
 
   #fourth {
     background: $ro;
+  }
+}
+
+footer {
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 50;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 50;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    a {
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px;
+      text-align: center;
+
+      .icon-bcreate-logo-small-icon {
+        font-family: "icomoon";
+      }
+
+      .icon-bcreate-logo-small-icon:before {
+        content: "\e900";
+      }
+    }
   }
 }
 
