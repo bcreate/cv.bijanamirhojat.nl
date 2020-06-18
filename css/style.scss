@@ -23,13 +23,27 @@ h1 {
 
 a {
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
-nav {
+svg,
+.icon {
+  transition: color 0.2s, font-size 0.2s;
+}
+
+.link-icon:hover {
+  svg,
+  .icon {
+    font-size: 48px;
+    color: $link-highlight;
+  }
+
+  cursor: pointer;
+}
+
+.sidebar {
   @media screen and (min-width: 768px) {
     position: fixed;
-    left: 0;
     top: 0;
     z-index: 50;
 
@@ -37,16 +51,19 @@ nav {
     justify-content: space-around;
     flex-direction: column;
     height: 100vh;
+    min-width: 100px;
   }
 
   @media screen and (max-width: 768px) {
     position: fixed;
-    top: 0;
     display: flex;
     justify-content: space-around;
     width: 100%;
     z-index: 50;
   }
+
+  box-shadow: $bg;
+  background: $bg;
 
   div {
     display: flex;
@@ -69,113 +86,47 @@ nav {
   }
 }
 
-.container {
-  background: #191919;
-  min-height: 100vh;
-
-  section {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 0;
-    opacity: 0;
-    transition: all ease-in 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (max-width: 768px) {
-      height: 0;
-      width: 100%;
-    }
-
-    h1 {
-      opacity: 0;
-    }
-  }
-
-  section:target {
-    opacity: 1;
-    position: absolute;
+nav {
+  @media screen and (min-width: 768px) {
     left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
+    -webkit-box-shadow: 1px 0px 10px 0px #000000;
+    -moz-box-shadow: 1px 0px 10px 0px #000000;
+    box-shadow: 1px 0px 10px 0px #000000;
+  }
 
-    * {
-      opacity: 0;
-      animation: 2s fadeIn forwards 0.5s;
+  @media screen and (max-width: 768px) {
+    top: 0;
+    -webkit-box-shadow: 0px 1px 10px 0px #000000;
+    -moz-box-shadow: 0px 1px 10px 0px #000000;
+    box-shadow: 0px 1px 10px 0px #000000;
+  }
+
+  div {
+    a {
+      &.close {
+        display: none;
+      }
     }
-  }
-
-  #bg {
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      max-width: 7%;
-      border-radius: 100%;
-    }
-  }
-
-  #first {
-    background: $lb;
-  }
-
-  #second {
-    background: $lo;
-  }
-
-  #third {
-    background: $rb;
-  }
-
-  #fourth {
-    background: $ro;
   }
 }
 
 footer {
   @media screen and (min-width: 768px) {
-    position: fixed;
     right: 0;
-    top: 0;
-    z-index: 50;
-
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 100vh;
+    -webkit-box-shadow: -1px 0px 10px 0px #000000;
+    -moz-box-shadow: -1px 0px 10px 0px #000000;
+    box-shadow: -1px 0px 10px 0px #000000;
   }
 
   @media screen and (max-width: 768px) {
-    position: fixed;
     bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    z-index: 50;
+    -webkit-box-shadow: 0px -1px 10px 0px #000000;
+    -moz-box-shadow: 0px -1px 10px 0px #000000;
+    box-shadow: 0px -1px 10px 0px #000000;
   }
 
   div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-
     a {
-      font-size: 40px;
-      color: #fff;
-      text-decoration: none;
-      padding: 20px;
-      text-align: center;
-
       .icon-bcreate-logo-small-icon {
         font-family: "icomoon";
       }
@@ -187,8 +138,162 @@ footer {
   }
 }
 
+.container {
+  background: #191919;
+  max-height: 100vh;
+  //overflow: hidden;
+  position: relative;
+
+  .section,
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+  }
+
+  section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+
+    padding-top: 100px;
+
+    * {
+      animation: 0.2s fadeOut forwards;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 0;
+      width: 100%;
+    }
+  }
+
+  section:target {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+
+    overflow: visible;
+
+    * {
+      opacity: 0;
+      animation: 1.5s fadeIn forwards 0.3s;
+    }
+  }
+
+  #bg {
+    background: $bg;
+
+    width: 100%;
+    height: 100vh;
+
+    img {
+      max-width: 10%;
+      border-radius: 100%;
+      animation: pulse-white 7s forwards;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    .email {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+
+      background: linear-gradient(
+        to right,
+        $link-highlight,
+        $link-highlight 50%,
+        #fff 50%
+      );
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+
+      transition: background-position 0.4s ease-in-out;
+
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
+  }
+
+  #personalia {
+    background: $lb;
+
+    .about-grid {
+      width: 50%;
+      height: 75%;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+
+      .grid-item {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px 0px #000000;
+
+        background-color: $bg;
+      }
+    }
+  }
+
+  #werkervaring {
+    background: $lo;
+  }
+
+  #vaardigheden {
+    background: $rb;
+  }
+
+  #opleidingen {
+    background: $ro;
+  }
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
 @keyframes fadeIn {
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
   }
 }

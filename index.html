@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bijan Amir Hojat | Web Designer</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/timeline.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -18,94 +19,82 @@
     <script src="js/cv.js"></script>
   </head>
   <body>
-    <nav>
+    <nav class="sidebar">
       <div>
-        <a href="#first"><i class="fas fa-user"></i></a>
+        <a class="personalia link-icon" data-link="#personalia"
+          ><i class="fas fa-user"></i
+        ></a>
       </div>
       <div>
-        <a href="#second"><i class="fas fa-briefcase"></i></a>
+        <a class="werkervaring link-icon" data-link="#werkervaring"
+          ><i class="fas fa-briefcase"></i
+        ></a>
       </div>
       <div>
-        <a class="close" href="#"><i class="fas fa-times"></i></a>
+        <a class="close link-icon" href="#"><i class="fas fa-times"></i></a>
       </div>
       <div>
-        <a href="#third"><i class="fas fa-cogs"></i></a>
+        <a class="vaardigheden link-icon" data-link="#vaardigheden"
+          ><i class="fas fa-cogs"></i
+        ></a>
       </div>
       <div>
-        <a href="#fourth"><i class="fas fa-user-graduate"></i></a>
+        <a class="opleidingen link-icon" data-link="#opleidingen"
+          ><i class="fas fa-user-graduate"></i
+        ></a>
       </div>
     </nav>
     <div class="container">
-      <div id="bg">
+      <div id="bg" class="section">
         <img src="img/rsz_bijan-square.jpg" alt="bijan" />
         <h1>Bijan Amir Hojat | Web Designer</h1>
-        <a href="">bijan_amirhojat@hotmail.com</a>
+        <a class="email" href=""
+          ><span
+            data-content="bijan_amirhojat@hotmail.com"
+            aria-hidden="true"
+          ></span
+          >bijan_amirhojat@hotmail.com</a
+        >
       </div>
 
-      <section id="first">
-        <div class="widget-container">
-          <ul class="icon-list-items">
-            <li class="icon-list-item">
-              <i class="far fa-id-card"></i>
-              <span class="icon-list-text">Over mij</span>
-            </li>
-          </ul>
-        </div>
-        <div class="icon-container">
-          <ul class="icon-list">
-            <li class="icon-list-item">
-              <i class="fas fa-user"></i>
-              <span class="icon-list-text">Bijan Amir hojat</span>
-            </li>
-            <li class="icon-list-item">
-              <i class="fas fa-map-marked-alt"></i>
-              <span class="icon-list-text">Bloedkoraalstraat 13</span>
-            </li>
-            <li class="icon-list-item">
-              <i class="fas fa-city"></i>
-              <span class="icon-list-text">9743KB, Groningen</span>
-            </li>
-            <li class="icon-list-item">
-              <i class="fas fa-globe"></i>
-              <span class="icon-list-text">Nederland</span>
-            </li>
-            <li class="icon-list-item">
-              <i class="fas fa-phone-alt"></i>
-              <span class="icon-list-text">+31(0)6 - 1116 9009</span>
-            </li>
-            <li class="icon-list-item">
-              <i class="far fa-envelope"></i>
-              <span class="icon-list-text">bijan_amirhojat@hotmail.com</span>
-            </li>
-            <li class="icon-list-item">
-              <i class="fas fa-venus-mars"></i>
-              <span class="icon-list-text">Man</span>
-            </li>
-          </ul>
+      <section id="personalia">
+        <h1>
+          Hoi, leuk je te ontmoeten!<br />
+          Ik ben Bijan.
+        </h1>
+        <div class="about-grid">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
         </div>
       </section>
 
-      <section id="second">
-        <h1>Second</h1>
+      <section id="werkervaring">
+        <h1>werkervaring</h1>
       </section>
 
-      <section id="third">
-        <h1>Third</h1>
+      <section id="vaardigheden">
+        <h1>vaardigheden</h1>
       </section>
 
-      <section id="fourth">
-        <h1>Fourth</h1>
+      <section id="opleidingen">
+        <h1>opleidingen</h1>
       </section>
     </div>
-    <footer>
+
+    <footer class="sidebar">
       <div>
-        <a href=""><span class="icon-bcreate-logo-small-icon"></span> </a>
+        <a class="link-icon" href=""
+          ><span class="icon icon-bcreate-logo-small-icon"></span>
+        </a>
       </div>
       <div>
-        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a class="link-icon" href=""><i class="fab fa-linkedin"></i></a>
       </div>
       <div>
-        <a href=""><i class="fab fa-dribbble"></i></a>
+        <a class="link-icon" href=""><i class="fab fa-dribbble"></i></a>
       </div>
     </footer>
   </body>

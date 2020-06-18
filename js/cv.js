@@ -9,5 +9,12 @@ $(document).ready(function () {
     }
   }
 
+  $(".link-icon").click(function (e) {
+    window.location.hash =
+      window.location.hash.indexOf(this.dataset.link) != -1
+        ? "#"
+        : this.dataset.link;
+  });
+
   window.addEventListener("hashchange", hashHandler, false);
 });
