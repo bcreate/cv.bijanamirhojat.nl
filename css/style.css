@@ -1,7 +1,9 @@
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.otf") format("opentype"), url("../fonts/icomoon.svg#filename") format("svg");
+  src: url("../fonts/icomoon.woff") format("woff"),
+    url("../fonts/icomoon.otf") format("opentype"),
+    url("../fonts/icomoon.svg#filename") format("svg");
 }
 
 * {
@@ -9,12 +11,18 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
   color: #fff;
   font-size: 2.5em;
+  font-weight: 200;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.7em;
   font-weight: 200;
 }
 
@@ -36,12 +44,12 @@ svg,
 .link-icon:hover svg,
 .link-icon:hover .icon {
   font-size: 48px;
-  color: #95ff00;
+  color: #ff4f00;
 }
 
 .sidebar {
   -webkit-box-shadow: #0c0c0c;
-          box-shadow: #0c0c0c;
+  box-shadow: #0c0c0c;
   background: #0c0c0c;
 }
 
@@ -54,11 +62,11 @@ svg,
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     height: 100vh;
     min-width: 100px;
   }
@@ -71,7 +79,7 @@ svg,
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     width: 100%;
     z-index: 50;
   }
@@ -82,11 +90,11 @@ svg,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
   width: 100%;
 }
@@ -160,14 +168,14 @@ footer div a .icon-bcreate-logo-small-icon:before {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -184,7 +192,7 @@ footer div a .icon-bcreate-logo-small-icon:before {
 
 .container section * {
   -webkit-animation: 0.2s fadeOut forwards;
-          animation: 0.2s fadeOut forwards;
+  animation: 0.2s fadeOut forwards;
 }
 
 @media screen and (max-width: 768px) {
@@ -207,7 +215,7 @@ footer div a .icon-bcreate-logo-small-icon:before {
 .container section:target * {
   opacity: 0;
   -webkit-animation: 1.5s fadeIn forwards 0.3s;
-          animation: 1.5s fadeIn forwards 0.3s;
+  animation: 1.5s fadeIn forwards 0.3s;
 }
 
 .container #bg {
@@ -220,7 +228,7 @@ footer div a .icon-bcreate-logo-small-icon:before {
   max-width: 10%;
   border-radius: 100%;
   -webkit-animation: pulse-white 7s forwards;
-          animation: pulse-white 7s forwards;
+  animation: pulse-white 7s forwards;
   margin-bottom: 25px;
 }
 
@@ -233,8 +241,15 @@ footer div a .icon-bcreate-logo-small-icon:before {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#95ff00), color-stop(50%, #95ff00), color-stop(50%, #fff));
-  background: linear-gradient(to right, #95ff00, #95ff00 50%, #fff 50%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff4f00),
+    color-stop(50%, #ff4f00),
+    color-stop(50%, #fff)
+  );
+  background: linear-gradient(to right, #ff4f00, #ff4f00 50%, #fff 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -257,8 +272,8 @@ footer div a .icon-bcreate-logo-small-icon:before {
   height: 75%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
@@ -267,7 +282,7 @@ footer div a .icon-bcreate-logo-small-icon:before {
   height: 100%;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 10px 0px #000000;
-          box-shadow: 5px 5px 10px 0px #000000;
+  box-shadow: 5px 5px 10px 0px #000000;
   background-color: #0c0c0c;
 }
 
@@ -286,42 +301,42 @@ footer div a .icon-bcreate-logo-small-icon:before {
 @-webkit-keyframes pulse-white {
   0% {
     -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   }
   70% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
   }
   100% {
     -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
 @keyframes pulse-white {
   0% {
     -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   }
   70% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
   }
   100% {
     -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
